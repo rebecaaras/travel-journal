@@ -65,14 +65,22 @@ header > span {
   align-items: center;
 }
 
-.travel-card > img {
+.main-image-container {
   height: 168px;
   width: 125px;
+  overflow: hidden;
   border-radius: 5px;
+}
+
+.main-image-container > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .info-container{
   margin-left: 16px;
+  /* padding-right: 5px; */
 }
 
 .location {
@@ -107,5 +115,23 @@ header > span {
 
 .description {
   margin-top: 8px;
+  max-width: 326px;
+}
+
+@media (max-height: 1080px) {
+  main {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 550px) {
+  main {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .info-container{
+    padding-right: 5px;
+  }
 }
 
