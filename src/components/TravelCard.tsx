@@ -1,24 +1,30 @@
-export default function TravelCard() {
+export default function TravelCard(props) {
+  const imageUrl = props.imageUrl
+  const imageAlt = props.alt
+  const country = props.country
+  const mapsUrl = props.mapsUrl
+  const title = props.title
+  const date = props.date
+  const text = props.text
+
   return (
     <div className="travel-card">
       <div className="main-image-container">
-        <img src="src/assets/mount-fuji.jpg" alt="travel image" />
+        <img src={imageUrl} alt={imageAlt} />
       </div>
       <div className="info-container">
         <div className="location">
           <img src="src/assets/location-pin.png" alt="location icon" />
-          <span>Japan</span>
-          <a href="" className="maps-link">
+          <span>{country}</span>
+          <a href={mapsUrl} className="maps-link">
             View on Google Maps
           </a>
         </div>
-        <div className="title">Mount Fuji</div>
-        <span className="date">12 Jan, 2023 - 24 Jan, 2023</span>
+        <div className="title">{title}</div>
+        <span className="date">{date}</span>
         <div className="description">
           <p>
-            Mount Fuji is the tallest mountain in Japan, standing at 3,776
-            meters (12,380 feet). Mount Fuji is the single most popular tourist
-            site in Japan, for both Japanese and foreign tourists.
+            {text}
           </p>
         </div>
       </div>
