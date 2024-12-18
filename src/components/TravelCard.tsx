@@ -1,11 +1,5 @@
 export default function TravelCard(props) {
-  const imageUrl = props.imageUrl
-  const imageAlt = props.alt
-  const country = props.country
-  const mapsUrl = props.mapsUrl
-  const title = props.title
-  const date = props.date
-  const text = props.text
+  const {imageUrl, imageAlt,  country,  mapsUrl,  title,  date,  text} = props
 
   return (
     <div className="travel-card">
